@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <style>
+    body {
+      background-color: lightblue;
+      color: olivedrab;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Stilizare login si inregistrare */
+    .login {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Aici am folosit niste stiluri specifice pentru formularul de login */
+    .login form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .login label {
+      background-color: transparent;
+      color: #333;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    .login input {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    .login input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .login a {
+      margin-top: 10px;
+      text-align: center;
+      color: #333;
+      text-decoration: none;
+      display: block;
+    }
+
+    .login a:hover {
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+<div class="login">
+  <h1>Login Admini</h1>
+  <form action="autentificare.php" method="post">
+    <label for="usernameAdmini">
+      <i class="fas fa-user"></i>
+    </label>
+    <input type="text" name="username" placeholder="Username" id="usernameAdmini" required>
+    <label for="passwordAdmini">
+      <i class="fas fa-lock"></i>
+    </label>
+    <input type="password" name="password" placeholder="Password" id="passwordAdmini" required>
+    <input type="submit" value="Login">
+  </form>
+</div>
+<br>
+<br>
+<br>
+<div class="login">
+  <h1>Login Clienti</h1>
+  <form action="autentificare2.php" method="post">
+    <label for="usernameParticipanti">
+      <i class="fas fa-user"></i>
+    </label>
+    <input type="text" name="username" placeholder="Username" id="usernameParticipanti" required>
+    <label for="passwordParticipanti">
+      <i class="fas fa-lock"></i>
+    </label>
+    <input type="password" name="password" placeholder="Password" id="passwordParticipanti" required>
+    <input type="submit" value="Login">
+  </form>
+  <div><a href="registration.html">Nou utilizator</a></div>
+</div>
+</body>
+</html>
